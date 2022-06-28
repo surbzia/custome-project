@@ -2,6 +2,7 @@
 
 namespace App\Models\Admin;
 
+use App\Models\Admin\File;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,6 +25,11 @@ class Book extends Model
         'is_active',
         'is_featured'
     ];
+
+    public function file()
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
     public function category()
     {
         return $this->belongsTo(Category::class);

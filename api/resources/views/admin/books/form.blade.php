@@ -9,7 +9,7 @@
         <hr>
     </div>
     <div class="card mb-30 card-border">
-        <form action="{{ $route }}" method="POST" id="category_form">
+        <form action="{{ $route }}" method="POST" id="category_form" enctype="multipart/form-data">
             @csrf
             @if ($is_edit)
                 {{ method_field('PUT') }}
@@ -179,10 +179,11 @@
                             name="category_id" style="width: 100%; height: 38px;">
                             <option value="">Select Category</option>
                             @foreach ($categories as $category)
-                            @php
-                                $selected = ($edit_Book->category_id == $category->id)? 'selected' : '';
-                            @endphp
-                                <option {{$selected}} value="{{ $category->id }}">{{ $category->name }}</option>
+                                @php
+                                    $selected = $edit_Book->category_id == $category->id ? 'selected' : '';
+                                @endphp
+                                <option {{ $selected }} value="{{ $category->id }}">{{ $category->name }}
+                                </option>
                             @endforeach
                         </select>
                         @error('category_id')
@@ -198,13 +199,25 @@
                             <option value="">Select Author</option>
 
                             @foreach ($authors as $author)
-                             @php
-                                $selected = ($edit_Book->author_id == $author->id)? 'selected' : '';
-                            @endphp
-                                <option {{$selected}} value="{{ $author->id }}">{{ $author->name }}</option>
+                                @php
+                                    $selected = $edit_Book->author_id == $author->id ? 'selected' : '';
+                                @endphp
+                                <option {{ $selected }} value="{{ $author->id }}">{{ $author->name }}</option>
                             @endforeach
                         </select>
                         @error('author_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>File</label>
+                        <input type="file" id="image" form="category_form"
+                            class="form-control @error('image') is-invalid @enderror"" name="image"
+                            placeholder="Image">
+
+                        @error('image')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

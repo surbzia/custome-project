@@ -7,9 +7,17 @@ use App\Http\Requests\Admin\BookRequest;
 use App\Models\Admin\Author;
 use App\Models\Admin\Book;
 use App\Models\Admin\Category;
+use App\Repositories\FileRepository;
+use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+
+    protected $file;
+    public function __construct(FileRepository $file)
+    {
+        $this->file = $file;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -54,11 +62,12 @@ class BookController extends Controller
      */
     public function store(BookRequest $request)
     {
-        $request = $request->all();
-        $request['is_active'] = (isset($request['is_active']) && $request['is_active']) == 'on' ? 1 : 0;
-        $request['is_featured'] = (isset($request['is_featured']) && $request['is_featured']) == 'on' ? 1 : 0;
-        $user = Book::create($request);
-
+        $request->is_active = (isset($request->is_active) && $request->is_active) == 'on' ? 1 : 0;
+        $request->is_featured = (isset($request->is_featured) && $request->is_featured) == 'on' ? 1 : 0;
+        $book = Book::create($request->all());
+        if ($request->image) {
+            $this->file->create([$request->image], 'books', $book->id);
+        }
         return redirect()->route('book.index')->with('status', 'Book has been created successfully');
     }
 
@@ -105,11 +114,14 @@ class BookController extends Controller
      */
     public function update(BookRequest $request, Book $Book)
     {
-        $request = $request->all();
+        $request->is_active = (isset($request->is_active) && $request->is_active) == 'on' ? 1 : 0;
+        $request->is_featured = (isset($request->is_featured) && $request->is_featured) == 'on' ? 1 : 0;
+        $Book->update($request->all());
 
-        $request['is_active'] = (isset($request['is_active']) && $request['is_active']) == 'on' ? 1 : 0;
-        $request['is_featured'] = (isset($request['is_featured']) && $request['is_featured']) == 'on' ? 1 : 0;
-        $Book->update($request);
+        if ($request->image) {
+            $this->file->create([$request->image], 'books', $Book->id);
+        }
+
         return redirect()->route('book.index')->with('status', 'Book has been updated successfully');
     }
 
