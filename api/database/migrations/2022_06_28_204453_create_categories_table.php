@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('short_description');
-            $table->text('description');
-            $table->bigInteger('is_active');
-            $table->bigInteger('is_featured');
+            $table->text('description')->nullable();
+            $table->bigInteger('is_active')->nullable();
+            $table->bigInteger('is_featured')->nullable();
             $table->timestamps();
         });
     }

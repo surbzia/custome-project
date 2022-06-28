@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AuthorRequest;
+use App\Http\Requests\Admin\CategoryRequest;
 use App\Http\Requests\Admin\UserRequest;
 use App\Models\Admin\Author;
 use App\Models\Admin\Category;
@@ -50,11 +51,11 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
         $request = $request->all();
-        $request['is_active'] = $request['is_active'] == 'on' ? 1 : 0;
-        $request['is_featured'] = $request['is_featured'] == 'on' ? 1 : 0;
+        $request['is_active'] = (isset($request['is_active']) && $request['is_active']) == 'on' ? 1 : 0;
+        $request['is_featured'] = (isset($request['is_featured']) && $request['is_featured']) == 'on' ? 1 : 0;
         $user = Category::create($request);
 
         return redirect()->route('category.index')->with('status', 'Category has been created successfully');
@@ -96,11 +97,12 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(CategoryRequest $request, Category $category)
     {
         $request = $request->all();
-        $request['is_active'] = $request['is_active'] == 'on' ? 1 : 0;
-        $request['is_featured'] = $request['is_featured'] == 'on' ? 1 : 0;
+
+        $request['is_active'] = (isset($request['is_active']) && $request['is_active']) == 'on' ? 1 : 0;
+        $request['is_featured'] = (isset($request['is_featured']) && $request['is_featured']) == 'on' ? 1 : 0;
         $category->update($request);
         return redirect()->route('category.index')->with('status', 'Category has been updated successfully');
     }
