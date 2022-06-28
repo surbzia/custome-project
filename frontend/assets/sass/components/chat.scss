@@ -1,0 +1,211 @@
+.chat {
+    padding: 80px 0;
+    .chat-main {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        .chat-title {
+            padding: 23px 30px 13px;
+            border-bottom: 1px solid #00000040;
+        h4 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 15px;
+            color: #000000;
+            margin: 0;
+        }
+        h5 {
+            font-weight: 600;
+            font-size: 20px;
+            color: #000000;
+            float: right;
+            margin: 0;
+            position: relative;
+            span {
+                font-weight: normal;
+                font-size: 13px;
+                color: #BDBDBD;
+                margin-left: 4px;
+            }
+            b {
+                background-color: #7BF41B;
+                height: 10px;
+                width: 10px;
+                border-radius: 30px;
+                position: absolute;
+                left: -20px;
+                top: 9px;
+            }
+        }
+        }
+        ul {
+            max-height: 600px;
+            overflow-y: scroll;
+            li {
+                padding: 10px 30px;
+                border-bottom: 1px solid #00000038;
+                img {
+                    border-radius: 30px;
+                    margin-right: 5px;
+                }
+                b {
+                    font-weight: 600;
+                    font-size: 15px;
+                    color: #000000;
+                }
+                small {
+                    font-size: 13px;
+                    color: #000000;
+                    padding: 0 13px;
+                }
+                span {
+                    font-size: 13px;
+                    float: right;
+                    color: #BFBFBF;
+                    margin-top: 4px;
+                }
+            }
+            li:nth-child(even) {
+                background: #FCFCFC;
+            }
+        }
+        .chat-msg {
+            padding: 18px 30px;
+            text-align: center;
+            background: #F4F4F4;
+            box-shadow: 0px 4px 85px rgb(0 0 0 / 5%);
+            .row {
+                align-items: center;
+                .col-10 {
+                    display: flex;
+                    align-items: center;
+            input {
+                background: #FDFDFD;
+                border: 1px solid #E1E1E1;
+                box-sizing: border-box;
+                border-radius: 30px;
+                width: 100%;
+                font-size: 14px;
+                padding: 22px 20px;
+            }
+            img {
+                margin-left: 20px;
+            }
+        }
+            button {
+                background: #2196F3;
+                border-radius: 30px;
+                width: 125%;
+                font-size: 12px;
+                padding: 10px 3px;
+            }
+        }
+
+        }
+
+    }
+    .add-main {
+        padding-top: 30px;
+    img {
+        width: 100%;
+    }
+}
+}
+
+
+@media only screen and (min-width: 1100px) and (max-width: 1365px){
+    .chat{
+        .chat-msg{
+        .row{
+            button{
+                font-size: 14px !important;
+            }
+        }
+    }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .chat{
+        .chat-msg{
+        .row{
+            button{
+                font-size: 14px !important;
+            }
+        }
+    }
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){
+    .chat{
+        .chat-msg{
+        .row{
+            button{
+                margin: 15px 0;
+            }
+        }
+    }
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+    .chat{
+        .chat-main{
+            background-color: #fff;
+            border-radius: 10px;
+            overflow-x: scroll;
+            .chat-title{
+                h4{
+                    font-size: 20px;
+                }
+                h5{
+                    font-size: 20px;
+                    b{
+                        top: 5px;
+                    }
+                }
+            }
+            .chat-msg{
+                .row{
+                    button{
+                        margin: 20px 0;
+                        width: 100%;
+                    }
+                }
+                .form-control{
+                    margin-bottom: 5px;
+                }
+            }
+            ul {
+                max-height: 600px;
+                overflow: scroll;
+                min-width: 560px;
+                background-color: #fff;
+                li{
+                    img {
+                        min-width: 45px;
+                    }
+                    b{
+                        font-size: 15px;
+                    }
+                    small {
+                        font-size: 14px;
+                    }
+                    span {
+                        font-size: 15px !important;
+                        margin-top: 10px !important;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+}
+
+
+
+
+
+

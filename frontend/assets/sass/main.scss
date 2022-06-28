@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../img/body-cvr.png);
+  background-color: #0B051C;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+a {
+   font-weight: 500;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.blue-btn{
+  border: none;
+    color: #fff;
+    background-color: #2196F3;
+    display: inline-block;
+    padding: 19px 35px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.4em;
+}
+.anchor-none {
+  text-decoration: none;
+  color: inherit;
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.toggle-player {
+  display: flex;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+  width: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 500ms all;
+  &:hover{
+      width: 536px;
+  }
+  .player-btn {
+      background-color: #2196F3;
+      height: 41px;
+      width: 46px;
+      text-align: center;
+      min-width: 35px;
+      cursor: pointer;
+      line-height: 45px;
+      .fa{color: #fff;font-size: 20px;}
+  }
+  .player-body {
+      background-color: #fff;
+      width: 100%;
+      height: 152px;
+      padding: 0 0px;
+  } 
+}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+  .toggle-player{
+    width: 30px;
+    &:hover{
+      width: 410px;
+    }
+    .player-body {
+      padding: 0 45px 0 30px;
+    }
+  }
+}
+@import "components/header.scss", "pages/index.scss", "pages/about.scss", "components/footer.scss", "components/chat.scss", "pages/livestream.scss","pages/advertise.scss","pages/wildcrafted.scss","pages/albums.scss","pages/events.scss","pages/albumname.scss","pages/videos.scss","pages/listofpresenters.scss","pages/contactus.scss","pages/djmat.scss","pages/shop.scss","pages/singleproduct.scss","pages/timeline.scss","pages/termsandconditions.scss","pages/privacy.scss","pages/login.scss","pages/checkout.scss","pages/addtocart.scss";

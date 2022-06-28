@@ -1,0 +1,245 @@
+.advertise{
+    .banner {
+        background-color: #000;
+        position: relative;
+        img {
+            width: 100%;
+            opacity: 0.4;
+        }
+        .slide-cap {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-size: 94.7855px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+                margin: 32px 0;
+            }
+        }
+    }
+    /*ADVERTISE PAGE*/
+    .advertise-sec {
+        color: #fcfcfc;
+        padding: 100px 0 80px;
+
+        .ad-title {
+            text-align: center;
+            h2 {
+                font-weight: bold;
+                font-size: 65px;
+                line-height: 70px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #fcfcfc;
+                max-width: 800px;
+                margin: 0 auto 60px;
+            }
+            p {
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+        .ad-cols {
+            .img-holder {
+                background: #fcfcfc;
+                text-align: center;
+                height: 281px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+                img {
+                    margin: 0 auto;
+                    width: 100%;
+                }
+            }
+            .img-desc {
+                padding: 25px 0 0;
+                h3 {
+                    font-weight: bold;
+                    font-size: 28px;
+                    line-height: 36px;
+                    letter-spacing: -0.03em;
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+                p {
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 24px;
+                    margin: 20px 0 40px;
+                    min-height: 60px;
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+                a {
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 15px;
+                    text-align: center;
+                    letter-spacing: 0.4em;
+                    text-transform: uppercase;
+                    padding: 20px 50px;
+                    background-color: #2196f3;
+                    color: #fbfbfb;
+                    border-radius: 50px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1920px){
+    .advertise{
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+        .advertise-sec{
+            .ad-title{
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px){
+    .advertise{
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+        .advertise-sec{
+            .ad-title{
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .advertise{
+        .banner{
+            .slide-cap{
+                top: 45px;
+                h1{
+                    font-size: 70px;
+                }
+            }
+        }
+        .advertise-sec{
+            .ad-title{
+                h2{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .advertise{
+        .banner{
+            .slide-cap{
+                top: 45px;
+                h1{
+                    font-size: 60px;
+                }
+            }
+        }
+        .advertise-sec{
+            .ad-title{
+                h2{
+                    font-size:30px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){
+    .advertise{
+        .banner{
+            .slide-cap{
+                top: 35px;
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+        .advertise-sec{
+            padding: 50px 0 80px;
+            .ad-title{
+                h2{
+                    font-size:30px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 519px){
+    .advertise  {
+        .banner img{
+            width: 100%;
+            opacity: 0.4;
+            min-height: 600px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 40px !important;
+                    letter-spacing: initial !important;
+                }
+            }
+        }
+    }
+    .events .banner img{
+        width: 100%;
+        opacity: 0.4;
+        min-height: 600px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .events .banner .slide-cap h1{
+        font-size: 50px !important;
+        letter-spacing: initial !important;
+    }
+    .advertise .advertise-sec .ad-title h2 {
+        font-weight: bold;
+        font-size: 30px;
+         line-height: initial;
+        text-align: center;
+     letter-spacing: initial; 
+        color: #fcfcfc;
+        margin: 0 auto 40px;
+    }
+    .advertise .advertise-sec .ad-cols .img-desc{
+        margin-bottom: 25px;
+    }
+}

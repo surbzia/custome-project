@@ -1,0 +1,307 @@
+.list-of-presenters{
+    .banner {
+        background-color: #000;
+        position: relative;
+        img {
+            width: 100%;
+            opacity: 0.4;
+        }
+        .slide-cap {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-size: 94.7855px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+                margin: 32px 0;
+            }
+        }
+    }
+
+    .albums-cover {
+        padding: 80px 0 150px;
+        text-align: center;
+
+        a.danchor {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            background-color: #2196f3;
+            color: #ffffff;
+            display: inline-block;
+            padding: 20px 45px;
+            border-radius: 50px;
+            margin-top: 60px;
+        }
+        .ac-title {
+            color: #ffffff;
+            margin-bottom: 60px;
+            h5 {
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 49px;
+            }
+            h2 {
+                font-weight: bold;
+                font-size: 65px;
+                line-height: 60px;
+                letter-spacing: -0.03em;
+            }
+        }
+        .all-covers {
+            display: inline-block;
+            width: 100%;
+            ul {
+                width: 100%;
+                display: inline-block;
+                li {
+                    float: left;
+                    width: 20%;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        width: 100%;
+                        height: 350px;
+                        max-height: 350px;
+                        object-fit: cover;
+                    }
+                    span {
+                        background-color: rgba(33, 150, 243, 0.8);
+                        color: #fff;
+                        display: flex;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        font-size: 45.6667px;
+                        line-height: 42px;
+                        letter-spacing: -0.03em;
+                        padding: 0 55px;
+                        transition: all 250ms ease-in-out;
+                        cursor: pointer;
+                    }
+                    &:hover {
+                        span {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1920px){
+    .list-of-presenters{
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+        .albums-cover{
+            .ac-title{
+                h5{
+                    font-size: 30px;
+                    line-height: 20px;
+                }
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px){
+    .list-of-presenters{
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+        .albums-cover{
+            .ac-title{
+                h5{
+                    font-size: 30px;
+                    line-height: 20px;
+                }
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .list-of-presenters{
+        .banner{
+            .slide-cap{
+                top: 45px;
+                h1{
+                    font-size: 70px;
+                }
+            }
+        }
+        .albums-cover{
+            padding: 40px 0 150px;
+            .ac-title{
+                margin-bottom: 40px;
+                h2{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .list-of-presenters{
+        .banner{
+            .slide-cap{
+                top: 45px;
+                h1{
+                    font-size: 60px;
+                }
+            }
+        }
+        .albums-cover{
+            padding: 40px 0 150px;
+            .ac-title{
+                margin-bottom: 40px;
+                h2{
+                    font-size:30px;
+                    line-height: 50px;
+                }
+                h5{
+                    font-size: 25px;
+                    line-height: 15px;
+                }
+            }
+            .all-covers{
+                ul{
+                    li{
+                        img{
+                            height: 150px;
+                            max-height: 150px;
+                        }
+                        span{
+                            font-size: 25px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){
+    .list-of-presenters{
+        .banner{
+            .slide-cap{
+                top: 35px;
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+        .albums-cover{
+            padding: 40px 0 150px;
+            .ac-title{
+                margin-bottom: 40px;
+                h2{
+                    font-size:30px;
+                    line-height: 50px;
+                }
+                h5{
+                    font-size: 25px;
+                    line-height: 15px;
+                }
+                
+            }
+            .all-covers{
+                ul{
+                    li{
+                        img{
+                            height: 100px;
+                            max-height: 100px;
+                        }
+                        span{
+                            font-size: 25px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+    .list-of-presenters{
+        .banner{
+            img{
+                width: 100%;
+                min-height: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+            .slide-cap{
+                h1{
+                    font-size: 40px !important;
+                    letter-spacing: initial !important;
+                }
+            }
+        }
+        .albums-cover{
+            padding: 40px 0 150px;
+            .ac-title{
+                margin-bottom: 40px;
+                h2{
+                     font-size: 40px;
+                    line-height: 40px;
+
+                }
+                h5{
+                    font-size: 25px;
+                    line-height: 40px;
+                }
+            }
+            .all-covers{
+                ul{
+                    li{
+                        width: 100%;
+                        span{
+                            font-size: 25px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}

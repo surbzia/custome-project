@@ -1,0 +1,330 @@
+.videos {
+    .banner {
+        background-color: #000;
+        position: relative;
+        img {
+            width: 100%;
+            opacity: 0.4;
+        }
+        .slide-cap {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-size: 94.7855px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+                margin: 32px 0;
+            }
+        }
+    }
+    .wrange {
+        text-align: center;
+        color: #fff;
+        padding: 80px 0 30px;
+        .wrange-title {
+            h5 {
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 49px;
+                text-align: center;
+                margin: 0;
+            }
+            h2 {
+                font-weight: bold;
+                font-size: 65px;
+                line-height: 60px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                margin: 10px 0 60px;
+            }
+        }
+        .wrange-video {
+            position: relative;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            img {
+                width: 100%;
+            }
+            a {
+                width: 137px;
+                height: 137px;
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                font-size: 45px;
+                color: #c4c4c4;
+                text-align: center;
+                line-height: 135px;
+
+                i {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .music-thumbs {
+        padding: 0 0px 130px;
+        .video-thumbs {
+            position: relative;
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                width: 100%;
+                max-height: 265px;
+                object-fit: cover;
+            }
+            a {
+                position: absolute;
+                color: #c4c4c4;
+                font-size: 28px;
+                background-color: #fff;
+                height: 90px;
+                width: 90px;
+                text-align: center;
+                border-radius: 50%;
+                line-height: 90px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1920px){
+    .videos{
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+        .wrange{
+            .wrange-title{
+                h5{
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px){
+    .videos{
+        .banner{
+            .slide-cap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+        .wrange{
+            .wrange-title{
+                h5{
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+                h2{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .videos{
+        .banner{
+            .slide-cap{
+                top: 45px;
+                h1{
+                    font-size: 70px;
+                }
+            }
+        }
+        .wrange{
+            .wrange-title{
+                h5{
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+                h2{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+        }
+        .music-thumbs{
+            .video-thumbs{
+                img{
+                    max-height: 215px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .videos{
+        .banner{
+            .slide-cap{
+                top: 45px;
+                h1{
+                    font-size: 60px;
+                }
+            }
+        }
+        .wrange{
+            padding: 40px 0 30px;
+            .wrange-title{
+                h5{
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+                h2{
+                    font-size:30px;
+                    line-height: 50px;
+                    margin: 10px 0 40px;
+                }
+            }
+            .wrange-video{
+                a{
+                    width: 100px;
+                     height: 100px;
+                     line-height: 100px;
+                     font-size: 40px;
+                }
+            }
+        }
+        .music-thumbs{
+            .video-thumbs{
+                img{
+                    max-height: 200px;
+                }
+                a{
+                    height: 75px;
+                    width: 75px;
+                   line-height: 75px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){
+    .videos{
+        .banner{
+            .slide-cap{
+                top: 35px;
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+        .wrange{
+            padding: 50px 0 40px;
+            .wrange-title{
+                h5{
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+                h2{
+                    font-size:35px;
+                    line-height: 50px;
+                    margin: 10px 0 40px;
+                }
+            }
+            .wrange-video{
+                a{
+                    width: 80px;
+                    height: 80px;
+                    line-height: 80px;
+                    font-size: 30px;
+                }
+            }
+        }
+        .music-thumbs{
+            .video-thumbs{
+                img{
+                    max-height: 170px;
+                }
+                a{
+                    height: 60px;
+                    width: 60px;
+                    line-height: 60px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 519px){
+    .videos{
+        .banner{
+            img{
+                width: 100%;
+                min-height: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+            .slide-cap{
+                h1{
+                    font-size: 50px !important;
+                    letter-spacing: initial !important;
+                }
+            }
+        }
+        .wrange{
+            padding: 40px 0 30px;
+            .wrange-title{
+                h5{
+                    font-size: 14px;
+                     line-height: 25px;
+                }
+                h2{
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin: 10px 0 35px;
+                }
+            }
+            .wrange-video{
+                a{
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    font-size: 25px;
+                }
+            }
+        }
+        .music-thumbs{
+            .video-thumbs{
+                img{min-height: 120px;}
+                a{
+                    height: 50px;
+                    width: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+
+}

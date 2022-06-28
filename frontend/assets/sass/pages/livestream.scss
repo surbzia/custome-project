@@ -1,0 +1,147 @@
+
+
+.livestream {
+    .banner {
+        background-color: #000;
+        img {
+            width: 100%;
+            opacity: 0.4;
+        }
+        .slide-cap {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-size: 94.7855px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+                margin: 32px 0;
+            }
+        }
+    }
+
+    /*LIVE STREAM PAGE*/
+    .livest {
+        padding: 100px 0 150px;
+        img.loader {
+            position: absolute;
+            left: 258px;
+            top: 162px;
+        }
+        #ls-video>div {
+            height: 100% !important;
+        }
+        #ls-video {
+            height: 100% !important;
+        }
+        .col {
+            &:first-child {
+                padding-right: 0;
+            }
+            &:last-child {
+                padding-left: 0;
+            }
+            .ls-video {
+                position: relative;
+                text-align: center;
+                img {
+                    width: 100%;
+                }
+                a {
+                    color: #c4c4c4;
+                    background-color: #fff;
+                    width: 137px;
+                    height: 137px;
+                    position: absolute;
+                    border-radius: 50%;
+                    font-size: 45px;
+                    line-height: 134px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .cht-pg {
+                .chat {
+                    padding: 0 !important;
+
+                    .container {
+                        padding: 0;
+
+                        .chat-main {
+                            border-radius: 0;
+                            ul {
+                                height: 362px;
+                                overflow-y: scroll;
+                            }
+
+                        }
+                        .add-main {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*END LIVE STREAM PAGE*/
+}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+  .livestream{
+   .banner{
+    .slide-cap{
+      h1 {
+        font-size: 35.7855px;
+       margin-top: -305px;
+    }
+    }
+   }
+    .livest{
+      img.loader{
+          position: absolute;
+         left: 138px;
+          top: 456px;
+      }
+      .col:last-child {
+        padding-left: 15px;
+    }
+     .col .ls-video {
+      position: relative;
+      text-align: center;
+      padding-right: 16px;
+  }
+  }
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .livestream{
+    .livest{
+      img.loader{
+        position: absolute;
+        left: 138px;
+        top: 180px;
+    }
+    }
+    .banner{
+      .slide-cap{
+        h1 {
+          margin-top: -470px;
+      }
+      }
+     }
+  }
+}
+

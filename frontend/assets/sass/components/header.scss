@@ -1,0 +1,215 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    padding: 20px 0 0;
+    .row {
+        justify-content: space-between;
+        align-items: center;
+        .tp-bar {
+            float: right;
+            margin: 0 0 25px;
+            li {
+                display: inline-block;
+                margin-left: 30px;
+                a {
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.3em;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    font-weight: 600;
+                }
+                .hdr-btn {
+                    background-color: #2196f3;
+                    display: inline-block;
+                    padding: 18px 48px;
+                    border-radius: 30px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .navbar {
+            padding: 0;
+            #nav-collapse {
+                justify-content: end;
+                li {
+                    margin-left: 39px;
+                    .nav-link {
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 17px;
+                        text-transform: uppercase;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    .resp {
+        display: none;
+    }
+}
+.navbar-light .navbar-toggler .fa {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1365px) {
+    .header {
+        .nav-link {
+            font-size: 12px !important;
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        .nav-link {
+            font-size: 12px !important;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header {
+        .row {
+            .tp-bar {
+                display: none;
+            }
+        }
+        .resp {
+            display: block
+        }
+    }
+    button.navbar-toggler {
+        position: absolute;
+        right: 0;
+    }
+    .header .row .navbar #nav-collapse {
+        justify-content: end;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        top: 50px;
+        background-color: #000;
+        width: 100%;
+    }
+    .header .row .navbar {
+        float: none !important;
+    }
+    .header .row .navbar #nav-collapse li {
+        margin-left: 0;
+    }
+    .header .row .navbar #nav-collapse li .nav-link {
+        padding: 8px 30px;
+    }
+    ul.resp a {
+        color: #fff;
+        padding: 5px 26px;
+        display: inline-block;
+    }
+    .navbar-nav {
+        padding: 30px 0;
+    }
+    ul.resp li a i {
+        padding-right: 12px;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 767px) {
+    .header {
+        img {
+            max-width: 100px;
+        }
+        .row {
+            .tp-bar {
+                display: none;
+            }
+        }
+        .resp {
+            display: block
+        }
+    }
+    button.navbar-toggler {
+        position: absolute;
+        right: 0;
+    }
+    .header .row .navbar #nav-collapse {
+        justify-content: end;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        top: 50px;
+        background-color: #000;
+        width: 100%;
+    }
+    .header .row .navbar {
+        float: none !important;
+    }
+    .header .row .navbar #nav-collapse li {
+        margin-left: 0;
+    }
+    .header .row .navbar #nav-collapse li .nav-link {
+        padding: 8px 30px;
+    }
+    ul.resp a {
+        color: #fff;
+        padding: 5px 26px;
+        display: inline-block;
+    }
+    .navbar-nav {
+        padding: 30px 0;
+    }
+    ul.resp li a i {
+        padding-right: 12px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 519px) {
+    .header {
+        img {
+            max-width: 100px;
+        }
+        .row {
+            .tp-bar {
+                display: none;
+            }
+        }
+        .resp {
+            display: block
+        }
+    }
+    button.navbar-toggler {
+        position: absolute;
+        right: 0;
+    }
+    .header .row .navbar #nav-collapse {
+        justify-content: end;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        top: 50px;
+        background-color: #000;
+        width: 100%;
+    }
+    .header .row .navbar {
+        float: none !important;
+    }
+    .header .row .navbar #nav-collapse li {
+        margin-left: 0;
+    }
+    .header .row .navbar #nav-collapse li .nav-link {
+        padding: 8px 30px;
+    }
+    ul.resp a {
+        color: #fff;
+        padding: 5px 26px;
+        display: inline-block;
+    }
+    .navbar-nav {
+        padding: 30px 0;
+    }
+    ul.resp li a i {
+        padding-right: 12px;
+    }
+}

@@ -1,0 +1,184 @@
+footer {
+    text-align: center;
+    .nletter {
+        padding: 0 0 50px;
+        .nletter-title {
+            margin: 0 0 50px;
+            h2 {
+                font-weight: bold;
+                font-size: 65px;
+                line-height: 60px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+            }
+        }
+        input {
+            background-color: transparent !important;
+            border: none;
+            border-bottom: 1px solid #262626;
+            border-radius: 0;
+            outline: none;
+            padding: 24px 10px;
+        }
+        button {
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: #fbfbfb;
+            background: #2196f3;
+            border-radius: 30px;
+            border: none;
+            width: 100%;
+            padding: 17px 0;
+        }
+    }
+
+    .ftr-cntc {
+        padding: 50px 0 70px;
+        .ftr-cntc-blk {
+            border-right: 1px solid #262626;
+            .bdr-none {
+                border: none !important;
+            }
+            span {
+                background-color: #fff;
+                color: #2196f3;
+                display: inline-flex;
+                min-width: 90px;
+                align-items: center;
+                justify-content: center;
+                padding: 23px 0;
+                font-size: 45px;
+                border-radius: 100%;
+                margin: 0 0 20px;
+            }
+            h5 {
+                font-size: 20px;
+                line-height: 30px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+            }
+            a {
+                font-size: 15px;
+                line-height: 30px;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: #ffffff;
+            }
+        }
+        .social {
+            padding-top: 50px;
+            .row {
+                align-items: center;
+                .ftr-soc {
+                    float: right;
+                    li {
+                        float: left;
+                    }
+                    i {
+                        min-width: 40px;
+                        padding: 12px 0;
+                        border-radius: 30px;
+                        margin-left: 11px;
+                        color: #ffffff;
+                    }
+                    .fa-facebook {
+                        background-color: #3b5998;
+                    }
+                    .fa-youtube-play {
+                        background-color: #cd201f;
+                    }
+                    .fa-instagram {
+                        background-color: #9143a0;
+                    }
+                    .fa-twitter {
+                        background-color: #55acee;
+                    }
+                }
+                .ftr-card {
+                    img {
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyrit {
+        border-top: 1px solid #262626;
+        padding: 17px 0 0;
+        color: #fff;
+        font-size: 14px;
+        a {
+            color: #2196f3;
+        }
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 767px){
+    footer{
+        .nletter{
+            .nletter-title{
+                h2{
+                    font-size: 37px;
+                    line-height: 45px;
+                }
+            }
+            input{
+                margin-bottom: 20px;
+            }
+        }
+        .ftr-cntc{
+            .ftr-cntc-blk{
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 519px){
+    footer{
+        .nletter{
+            button {
+                font-size:15px !important;
+            }
+            .nletter-title{
+                h2{
+                    font-size: 30px;
+                    line-height: initial;
+                 letter-spacing: initial;
+                }
+            }
+            input{
+                margin-bottom: 20px;
+            }
+        }
+        .ftr-cntc{
+            .ftr-cntc-blk{
+                padding-bottom: 25px;
+                a{font-size: 15px !important;}
+            }
+        }
+        .social{
+            .row{
+                .ftr-card{
+                    img{
+                        float: initial !important;
+                    }
+                }
+                .ftr-soc{
+                    float: initial !important;
+                    margin-bottom: 70px;
+                    li{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        .ftr-card {
+            margin-left: -20px;
+        }
+    }
+}
