@@ -5,13 +5,15 @@ namespace App\Models\Admin;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Author extends Model
+class Category extends Model
 {
     use HasFactory;
     protected $fillable = [
         'name',
         'slug',
-        'email',
+        'short_description',
         'description',
+        'is_active',
+        'is_featured',
     ];
 }

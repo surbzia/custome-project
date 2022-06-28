@@ -34,6 +34,7 @@
                      </a>
                      <ul class="submenu">
                          <li><a href="{{route('author.index')}}" class="{{activeNav('author.index')}}">Author</a></li>
+                         <li><a href="{{route('category.index')}}" class="{{activeNav('category.index')}}">Category</a></li>
                      </ul>
                  </li>
 

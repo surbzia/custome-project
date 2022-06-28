@@ -94,6 +94,7 @@
             }else{
                 alert('Select or Add Moduel first..');
             }
+        }
 
     </script>
 @endsection

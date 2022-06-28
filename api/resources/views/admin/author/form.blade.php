@@ -16,10 +16,10 @@
                             {{ method_field('PUT') }}
                         @endif
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
                                 <div class="form-group">
                                     <label>Author Name</label>
-                                    <input type="text" id="name"
+                                    <input type="text" id="name"  onkeyup="generateSlug(event)"
                                         value="{{ old('name', $edit_author) }}"
                                         class="form-control @error('name') is-invalid @enderror"" name="name"
                                         placeholder="User Name">
@@ -30,7 +30,21 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="form-group">
+                                    <label>Slug</label>
+                                    <input type="text" id="slug"
+                                        value="{{ old('slug', $edit_author) }}"
+                                        class="form-control @error('slug') is-invalid @enderror"" name="slug"
+                                        placeholder="Slug">
+                                    @error('slug')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
                                 <div class="form-group">
                                     <label>Email</label>
                                     <input type="text" id="email"
@@ -71,5 +85,13 @@
 @endsection
 @section('script')
     <script>
+                function generateSlug(event) {
+            let str = event.target.value;
+
+                str = str.replace(/[^a-zA-Z0-9\s]/g, "");
+                str = str.toLowerCase();
+                str = str.replace(/\s/g, '-');
+                $('#slug').val(str);
+        }
     </script>
 @endsection
