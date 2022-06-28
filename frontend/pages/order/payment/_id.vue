@@ -2,7 +2,7 @@
   <section class="checkout">
     <!-- PAGE BANNER -->
     <section class="banner">
-      <img src="~/assets/img/bannerinner.png" alt="" />
+
       <b-container>
         <div class="slide-cap">
           <h1>Payment</h1>
@@ -37,7 +37,7 @@ import { loadScript } from "@paypal/paypal-js";
 export default {
   async asyncData({$axios, params}){
     const {data} = await $axios.$get('orders/'+params.id)
-    return {data} 
+    return {data}
   },
   computed:{
     currency(){

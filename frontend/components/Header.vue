@@ -1,68 +1,158 @@
 <template>
-  <header class="header">
-    <b-container>
-       <b-row>
-          <b-col cols="2">
-            <b-navbar-brand to="/"><img src="~/assets/img/logo.png" alt="" /></b-navbar-brand>
-          </b-col>
-      <b-col cols="10">
-       <b-row>
-        <b-col cols="12">
-            <div class="tp-bar">
-                <ul>
-                   <li><nuxt-link to="/live-presentators"><span><img src="~/assets/img/live.png" alt="" /></span> Stream</nuxt-link></li>
-                   <li v-if="!loggedIn"><nuxt-link to="/login"><span><i class="fa fa-user-circle" aria-hidden="true"></i></span>Login</nuxt-link></li>
-                   <li v-if="!loggedIn"><nuxt-link to="/register"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Register</nuxt-link></li>
-                   <li v-if="loggedIn"><nuxt-link to="/customer"><span><i class="fa fa-user-circle" aria-hidden="true"></i></span>Dashboard</nuxt-link></li>
-                   <li v-if="loggedIn"><nuxt-link to="/customer/logout"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Logout</nuxt-link></li>
-                   <li><nuxt-link to="/cart"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>{{currency}} {{cartTotal}}</nuxt-link></li>
-                   <li><nuxt-link to="/timeline" class="hdr-btn">Schedule</nuxt-link></li>
-                </ul>
-            </div>
-        </b-col>
-        </b-row>
-      <b-navbar toggleable="lg">
-        <b-navbar-toggle target="nav-collapse"><i class="fa fa-bars"></i></b-navbar-toggle>
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <b-nav-item to="/">Home</b-nav-item>
-            <b-nav-item to="/advertise">Advertising</b-nav-item>
-            <b-nav-item to="/events">Events</b-nav-item>
-            <b-nav-item to="/products">Shop</b-nav-item>
-            <b-nav-item to="/albums">Albums</b-nav-item>
-            <b-nav-item to="/videos">Videos</b-nav-item>
-            <b-nav-item to="/contactus">Contact Us</b-nav-item>
-            <b-nav-item to="/presenters">Presenters</b-nav-item>
-             <ul class="resp">
-                   <li><nuxt-link to="/live-presentators"><span><img src="~/assets/img/live.png" alt="" /></span> Stream</nuxt-link></li>
-                   <li v-if="!loggedIn"><nuxt-link to="/login"><span><i class="fa fa-user-circle" aria-hidden="true"></i></span>Login</nuxt-link></li>
-                   <li v-if="!loggedIn"><nuxt-link to="/register"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Register</nuxt-link></li>
-                   <li v-if="loggedIn"><nuxt-link to="/customer"><span><i class="fa fa-user-circle" aria-hidden="true"></i></span>Dashboard</nuxt-link></li>
-                   <li v-if="loggedIn"><nuxt-link to="/customer/logout"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Logout</nuxt-link></li>
-                   <li><nuxt-link to="/cart"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>{{currency}} {{cartTotal}}</nuxt-link></li>
-                   <li><nuxt-link to="/timeline" class="hdr-btn">Schedule</nuxt-link></li>
-                </ul>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-      </b-col>
+<header>
+    <section class="top-bar-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+          <div class="top-logo" data-aos="fade-right" data-aos-duration="800">
+            <a href="index.php"
+              ><img src="../assets/images/logo.png" class="img-fluid" alt=""
+            /></a>
+          </div>
+          <!--top-logo-->
+        </div>
 
-       </b-row>
-    </b-container>
-  </header>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+          <div
+            class="top--search-bar"
+            data-aos="fade-in"
+            data-aos-duration="800"
+          >
+            <form action="#" method="post">
+              <div class="input-group">
+                <div class="form-outline">
+                  <input
+                    type="search"
+                    id="form1"
+                    class="form-control"
+                    placeholder="Search"
+                  />
+                </div>
+                <button type="button" class="top-search-bar-btn">
+                  <img
+                    src="../assets/images/search-icon.png"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+          <!--top--search-bar-->
+        </div>
+
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+          <div
+            class="top-right-icons"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
+            <ul>
+              <li>
+                <a href="#"><img src="../assets/images/heart.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../assets/images/cart.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../assets/images/user.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+          <!--top-logo-->
+        </div>
+
+        <div class="website-divider-line"></div>
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--top-bar-sec-->
+
+  <section class="navbar-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="header-navbar">
+            <nav
+              class="navbar navbar-expand-md"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Event</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </div>
+                </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Books</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Audiobook</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Png</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Svg</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blogs.php">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!--header-navbar-->
+        </div>
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--navbar-sec-->
+</header>
 </template>
 <script>
 export default {
-  computed:{
-    cartTotal(){
-      return this.$store.state.cart.total
+  computed: {
+    cartTotal() {
+      return this.$store.state.cart.total;
     },
-    currency(){
-      return this.$store.state.currency
+    currency() {
+      return this.$store.state.currency;
     },
-    loggedIn(){
+    loggedIn() {
       return this.$store.state.loggedIn;
     },
-  }
-}
+  },
+};
 </script>

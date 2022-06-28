@@ -2,7 +2,7 @@
   <div>
     <Header />
     <Nuxt />
-    <div class="toggle-player">
+    <!-- <div class="toggle-player">
       <div class="player-btn">
         <i class="fa fa-play"></i>
       </div>
@@ -14,7 +14,7 @@
           style="width: 100%;"
         ></iframe>
       </div>
-    </div>
+    </div> -->
     <Footer />
   </div>
 </template>
