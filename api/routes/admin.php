@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\{AuthorController, CategoryController, PermissionController, RoleController, UserController};
+use App\Http\Controllers\Admin\{AuthorController, BookController, CategoryController, PermissionController, RoleController, UserController};
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
@@ -49,6 +49,7 @@ Route::middleware([AuthenticateAdmin::class])->group(
         Route::resource('user', UserController::class);
         Route::resource('author', AuthorController::class);
         Route::resource('category', CategoryController::class);
+        Route::resource('book', BookController::class);
         Route::get('/profile', function () {
             return view('admin.user.profile');
         })->name('user.profile');
