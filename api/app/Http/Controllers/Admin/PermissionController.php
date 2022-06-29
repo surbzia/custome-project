@@ -51,11 +51,24 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         $request = $request->all();
-
-        if (isset($request['new_module'])) {
-            $request['module'] = $request['new_module'];
+        if ($request['create_crud'] == 'on') {
+            $array = [['name' => 'list'], ['name' => 'create'], ['name' => 'edit'], ['name' => 'update'], ['name' => 'delete']];
+            if (isset($request['new_module'])) {
+                $request['module'] = $request['new_module'];
+            }
+            foreach ($array as $ar) {
+                $permission = new Permission();
+                $permission->name = ucwords($ar['name']);
+                $permission->slug = $ar['name'] . '-' . strtolower($request['module']);
+                $permission->module = $request['module'];
+                $permission->save();
+            }
+        } else {
+            if (isset($request['new_module'])) {
+                $request['module'] = $request['new_module'];
+            }
+            Permission::create($request);
         }
-        Permission::create($request);
         return redirect()->route('permission.index')->with('status', 'Permission has been added successfully');
     }
 

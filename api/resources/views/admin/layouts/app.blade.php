@@ -77,13 +77,14 @@
     <script src="{{ asset('templete/vendors/scripts/script.min.js') }}"></script>
     <script src="{{ asset('templete/vendors/scripts/process.js') }}"></script>
     <script src="{{ asset('templete/vendors/scripts/layout-settings.js') }}"></script>
-    <script src="{{ asset('templete/plugins/apexcharts/apexcharts.min.js') }}"></script>
+    {{-- <script src="{{ asset('templete/plugins/apexcharts/apexcharts.min.js') }}"></script> --}}
     <script src="{{ asset('templete/plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('templete/plugins/datatables/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('templete/plugins/datatables/js/dataTables.responsive.min.js') }}"></script>
     <script src="{{ asset('templete/plugins/datatables/js/responsive.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('templete/vendors/scripts/dashboard.js') }}"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
