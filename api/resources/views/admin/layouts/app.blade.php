@@ -21,11 +21,9 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     </link>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"></link>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></link>
+
 
     <link rel="stylesheet" type="text/css" href="{{ asset('templete/vendors/styles/core.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/toaster.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('templete/vendors/styles/icon-font.min.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('templete/plugins/datatables/css/dataTables.bootstrap4.min.css') }}">
@@ -53,16 +51,6 @@
     <div class="mobile-menu-overlay"></div>
 
     <div class="main-container">
-        @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
-        @if (session('error'))
-            <div class="alert alert-danger" role="alert">
-                {{ session('error') }}
-            </div>
-        @endif
         @include('admin.layouts.toaster')
         <div class="mb-15 ml-0 mt-15">
             @yield('content')
@@ -124,7 +112,7 @@
     <script src="{{ asset('templete/vendors/scripts/dashboard.js') }}"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 
 
 
