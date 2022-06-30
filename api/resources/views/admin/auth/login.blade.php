@@ -27,7 +27,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <div class="card p-5" style="    border: 1px solid #b7b7b7;">
+                        {{-- <div class="card p-5" style="    border: 1px solid #b7b7b7;"> --}}
+                              <div class="card p-5 height-100-p widget-style1 p-5">
 
                             <img src="{{ asset('templete/vendors/images/deskapp-logo.svg') }}" height="46px"
                                 alt="" class="dark-logo">

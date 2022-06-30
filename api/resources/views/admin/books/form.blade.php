@@ -8,7 +8,8 @@
         </div>
         <hr>
     </div>
-    <div class="card mb-30 card-border">
+    {{-- <div class="card mb-30 card-border"> --}}
+          <div class="card-box height-100-p widget-style1 p-5">
         <form action="{{ $route }}" method="POST" id="category_form" enctype="multipart/form-data">
             @csrf
             @if ($is_edit)

@@ -21,6 +21,7 @@
         </div>
         <hr>
         <div class="col-md-12">
+              <div class="card-box height-100-p widget-style1 p-5">
             <div class="row">
 
                 @foreach ($permissions as $key => $permissons)
@@ -49,6 +50,7 @@
                     </div>
                 @endforeach
             </div>
+        </div>
         </div>
     </div>
 @endsection

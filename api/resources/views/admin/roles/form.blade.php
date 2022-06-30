@@ -8,7 +8,8 @@
         </div>
         <hr>
         <div class="col-md-12 " style="padding-right: 64px;">
-            <div class="card mb-30 card-border">
+            {{-- <div class="card mb-30 card-border"> --}}
+                  <div class="card-box height-100-p widget-style1 p-5">
                 <div class="pb-20">
                     <form action="{{ $route }}" method="POST">
                         @csrf

@@ -8,7 +8,8 @@
         </div>
         <hr>
         <div class="col-md-12">
-            <div class="card-box mb-30 card-border" style="margin-right: 64px;">
+            {{-- <div class="card-box mb-30 card-border" style="margin-right: 64px;"> --}}
+                  <div class="card-box height-100-p widget-style1 p-5">
                 <div class="pb-20">
                     <table id="permission" class="row-border" style="width:80%:">
                         <thead>
