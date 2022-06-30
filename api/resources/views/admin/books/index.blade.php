@@ -15,6 +15,7 @@
                             <tr>
                                 <th>S#</th>
                                 <th>Name</th>
+                                <th>Sku</th>
                                 <th>Category</th>
                                 <th>Author</th>
                                 <th>Active</th>
@@ -29,6 +30,7 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $book['name'] }}</td>
+                                    <td>{{ $book['sku'] }}</td>
                                     <td>{{ $book['category_name'] }}</td>
                                     <td>{{ $book['author_name'] }}</td>
                                     <td>

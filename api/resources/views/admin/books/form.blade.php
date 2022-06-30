@@ -17,7 +17,7 @@
             <input type="hidden" value="{{ $sku }}" name="sku">
             <div class="row">
                 <div class="col-md-8">
-                    <label for=""><strong>SKU:</strong>{{ $sku }}</label>
+                    <label for=""><strong>SKU:</strong> {{ $sku }}</label>
                 </div>
             </div>
             <div class="row">

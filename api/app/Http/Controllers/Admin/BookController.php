@@ -38,9 +38,10 @@ class BookController extends Controller
     {
 
         $obj = new Book();
-        $sku = Book::orderBy('id', 'asc')->first();
+        $book = Book::orderBy('id', 'desc')->first();
         $categories = Category::where('is_active', 1)->get();
         $authors = Author::all();
+        $NewSku = is_null($book) ? 'pro-' . 1 : ++$book->sku;
         $data = [
             'is_edit' => false,
             'title' => 'Add Book',
@@ -49,7 +50,7 @@ class BookController extends Controller
             'categories' => $categories,
             'authors' => $authors,
             'edit_Book' => $obj,
-            'sku' => is_null($sku) ? 1 : $sku->sku + 1,
+            'sku' =>     $NewSku
         ];
         return view('admin.books.form')->with($data);
     }
@@ -62,11 +63,12 @@ class BookController extends Controller
      */
     public function store(BookRequest $request)
     {
-        $request->is_active = (isset($request->is_active) && $request->is_active) == 'on' ? 1 : 0;
-        $request->is_featured = (isset($request->is_featured) && $request->is_featured) == 'on' ? 1 : 0;
-        $book = Book::create($request->all());
-        if ($request->image) {
-            $this->file->create([$request->image], 'books', $book->id);
+        $request = $request->all();
+        $request['is_active'] = (isset($request['is_active']) && $request['is_active']) == 'on' ? 1 : 0;
+        $request['is_featured'] = (isset($request['is_featured']) && $request['is_featured']) == 'on' ? 1 : 0;
+        $book = Book::create($request);
+        if (isset($request['image'])) {
+            $this->file->create([$request['image']], 'books', $book->id);
         }
         return redirect()->route('book.index')->with('status', 'Book has been created successfully');
     }
@@ -114,12 +116,13 @@ class BookController extends Controller
      */
     public function update(BookRequest $request, Book $Book)
     {
-        $request->is_active = (isset($request->is_active) && $request->is_active) == 'on' ? 1 : 0;
-        $request->is_featured = (isset($request->is_featured) && $request->is_featured) == 'on' ? 1 : 0;
-        $Book->update($request->all());
+        $request = $request->all();
+        $request['is_active'] = (isset($request['is_active']) && $request['is_active']) == 'on' ? 1 : 0;
+        $request['is_featured'] = (isset($request['is_featured']) && $request['is_featured']) == 'on' ? 1 : 0;
+        $Book->update($request);
 
-        if ($request->image) {
-            $this->file->create([$request->image], 'books', $Book->id);
+        if (isset($request['image'])) {
+            $this->file->create([$request['image']], 'books', $Book->id);
         }
 
         return redirect()->route('book.index')->with('status', 'Book has been updated successfully');

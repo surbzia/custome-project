@@ -18,4 +18,5 @@ class AuthenticateAdmin extends Middleware
             return route('login');
         }
     }
+
 }
